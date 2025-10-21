@@ -32,12 +32,14 @@ class WajibController extends Controller
         $wajib =  $request->wajib;
         $student = $request->student;
 
+
       $createdWajib =   Wajib::create([
             "record_id"=>$student["record"]["id"],
             "surat"=>$wajib["surat"],
             "from_aya"=>$wajib["from_aya"],
             "to_aya"=>$wajib["to_aya"],
-            "due_date"=>$wajib["due_date"]??null,
+            "due_date"=>$wajib["due_date"] ?? null ,
+            "isRev" => $wajib["isRev"] ?? false
         ]);
 
         return response()->json($createdWajib);

@@ -14,6 +14,7 @@ class Wajib extends Model
         'surat',
         'from_aya',
         'to_aya',
+        'isRev'
     ];
 
     public function record()

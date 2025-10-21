@@ -17,6 +17,7 @@ return new class extends Migration
             $table->date('due_date')->nullable();
             $table->boolean('completed')->default(false);
             $table->string("mark")->nullable();
+            $table->boolean('isRev')->default(false);
         
             $table->string("surat");
             $table->string("from_aya");
