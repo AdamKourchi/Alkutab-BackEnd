@@ -23,54 +23,54 @@ class RolesAndAdminSeeder extends Seeder
 
         // Create the admin account
         $admin = User::firstOrCreate(
-            ['email' => 'admin@example.com'],
+            ['email' => 'toumimiloud279@gmail.com'],
             [
-                'name' => 'Super Admin',
-                'password' => bcrypt('123'),
+                'name' => 'Admin',
+                'password' => bcrypt('sidibennour2025'),
             ]
         );
 
-        //create some teachers for testing
-        $teachers = collect();
+        // //create some teachers for testing
+        // $teachers = collect();
 
-        for ($i = 0; $i < 3; $i++) {
-            $teachers->push(User::create([
-                'name' => fake()->name(),
-                'email' => fake()->unique()->safeEmail(),
-                'phone' => fake()->phoneNumber(),
-                'password' => bcrypt('123'),
-            ]));
-        }
+        // for ($i = 0; $i < 3; $i++) {
+        //     $teachers->push(User::create([
+        //         'name' => fake()->name(),
+        //         'email' => fake()->unique()->safeEmail(),
+        //         'phone' => fake()->phoneNumber(),
+        //         'password' => bcrypt('123'),
+        //     ]));
+        // }
 
         // Assign admin role
         if (!$admin->hasRole('admin')) {
             $admin->assignRole($adminRole);
         }
 
-        // Assign teacher role
-        foreach ($teachers as $teacher) {
+        // // Assign teacher role
+        // foreach ($teachers as $teacher) {
 
-            $teacher->assignRole($teacherRole);
+        //     $teacher->assignRole($teacherRole);
 
-        }
+        // }
 
         //create some students 
-        $students = collect();
+        // $students = collect();
 
-        for ($i = 0; $i < 3; $i++) {
-            $students->push(User::create([
-                'name' => fake()->name(),
-                'email' => fake()->unique()->safeEmail(),
-                'phone' => fake()->phoneNumber(),
-                'password' => bcrypt('123'),
-            ]));
-        }
-        // Assign user role
-        foreach ($students as $student) {
+        // for ($i = 0; $i < 3; $i++) {
+        //     $students->push(User::create([
+        //         'name' => fake()->name(),
+        //         'email' => fake()->unique()->safeEmail(),
+        //         'phone' => fake()->phoneNumber(),
+        //         'password' => bcrypt('123'),
+        //     ]));
+        // }
+        // // Assign user role
+        // foreach ($students as $student) {
 
-            $student->assignRole($studentRole);
+        //     $student->assignRole($studentRole);
 
-        }
+        // }
 
 
     }
