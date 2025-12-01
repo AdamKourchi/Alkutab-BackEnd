@@ -1,151 +1,152 @@
 {{-- resources/views/emails/teacher_invitation_ar.blade.php --}}
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دعوة للانضمام للمنصة</title>
-    <style>
-        /* Define the new Accent Color */
-        :root {
-            --accent-color: #104d46;
-            --secondary-accent: #0c3933; /* Slightly darker shade for hover/shadows */
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>دعوة للانضمام للمنصة</title>
+        <style>
+            /* General Styling and RTL Support */
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: "Tahoma", "Arial", sans-serif;
+                background-color: #fbf8f1; /* Light, warm background */
+                color: #333333;
+                direction: rtl;
+                text-align: right;
+            }
+            .container {
+                max-width: 600px;
+                margin: 20px auto;
+                padding: 30px;
+                background-color: #ffffff;
+                border: 1px solid #104d46; /* Border using the new color */
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
 
-        /* General Styling and RTL Support */
-        body { 
-            margin: 0; 
-            padding: 0; 
-            font-family: 'Tahoma', 'Arial', sans-serif; 
-            background-color: #FBF8F1; /* Light, warm background */
-            color: #333333; 
-            direction: rtl; 
-            text-align: right; 
-        }
-        .container { 
-            max-width: 600px; 
-            margin: 20px auto; 
-            padding: 30px; 
-            background-color: #FFFFFF; 
-            border: 1px solid var(--accent-color); /* Border using the new color */
-            border-radius: 10px; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-        }
-        
-        /* Header and بسم الله */
-        .header { 
-            text-align: center; 
-            border-bottom: 2px solid var(--accent-color); /* Separator using the new color */
-            padding-bottom: 20px; 
-            margin-bottom: 30px; 
-        }
-        .header h1 { 
-            color: var(--accent-color); /* New color for the main greeting */
-            margin: 0; 
-            font-size: 24px; 
-            font-weight: bold;
-        }
-        
-        /* Content Section */
-        .content { 
-            line-height: 1.8; 
-            font-size: 17px; 
-            text-align: right; 
-        }
-        .greeting { 
-            font-size: 22px; 
-            font-weight: bold; 
-            color: var(--accent-color); /* New color for the greeting */
-            margin-bottom: 20px;
-        }
-        
-        /* Call to Action (CTA) Button */
-        .cta-button { 
-            text-align: center; 
-            margin: 35px 0; 
-        }
-        .cta-button a { 
-            display: inline-block; 
-            padding: 15px 30px; 
-            background-color: var(--accent-color); /* New color button background */
-            color: #FFFFFF; 
-            text-decoration: none; 
-            border-radius: 8px; 
-            font-weight: bold; 
-            font-size: 18px; 
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
-            transition: background-color 0.3s;
-        }
-        .cta-button a:hover {
-            background-color: var(--secondary-accent); /* Slightly darker hover effect */
-        }
+            /* Header and بسم الله */
+            .header {
+                text-align: center;
+                border-bottom: 2px solid #104d46; /* Separator using the new color */
+                padding-bottom: 20px;
+                margin-bottom: 30px;
+            }
+            .header h1 {
+                color: #104d46; /* New color for the main greeting */
+                margin: 0;
+                font-size: 24px;
+                font-weight: bold;
+            }
 
-        .link-text { 
-            word-break: break-all; 
-            text-align: center; 
-            color: #666666; 
-            font-size: 13px; 
-            margin-top: 15px; 
-            padding: 10px;
-            background-color: #F0F0F0;
-            border-radius: 5px;
-        }
-        
-        /* Footer and Expiration Notice */
-        .expiration { 
-            color: #8B0000; /* Dark Red kept for the warning */
-            font-weight: bold; 
-            text-align: center; 
-            margin-top: 30px; 
-            font-size: 15px;
-        }
-        .footer { 
-            text-align: center; 
-            margin-top: 40px; 
-            padding-top: 20px; 
-            border-top: 1px dashed var(--accent-color); /* Dashed line using the new color */
-            font-size: 14px; 
-            color: #777777; 
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>بسم الله الرحمن الرحيم</h1>
+            /* Content Section */
+            .content {
+                line-height: 1.8;
+                font-size: 17px;
+                text-align: right;
+            }
+            .greeting {
+                font-size: 22px;
+                font-weight: bold;
+                color: #104d46; /* New color for the greeting */
+                margin-bottom: 20px;
+            }
+
+            /* Call to Action (CTA) Button */
+            .cta-button {
+                text-align: center;
+                margin: 35px 0;
+            }
+            .cta-button a {
+                display: inline-block;
+                padding: 15px 30px;
+                background-color: #104d46; /* New color button background */
+                color: #ffffff;
+                text-decoration: none;
+                border-radius: 8px;
+                font-weight: bold;
+                font-size: 18px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                transition: background-color 0.3s;
+            }
+            .cta-button a:hover {
+                background-color: "#0c3933"; /* Slightly darker hover effect */
+            }
+
+            .link-text {
+                word-break: break-all;
+                text-align: center;
+                color: #666666;
+                font-size: 13px;
+                margin-top: 15px;
+                padding: 10px;
+                background-color: #f0f0f0;
+                border-radius: 5px;
+            }
+
+            /* Footer and Expiration Notice */
+            .expiration {
+                color: #8b0000; /* Dark Red kept for the warning */
+                font-weight: bold;
+                text-align: center;
+                margin-top: 30px;
+                font-size: 15px;
+            }
+            .footer {
+                text-align: center;
+                margin-top: 40px;
+                padding-top: 20px;
+                border-top: 1px dashed #104d46; /* Dashed line using the new color */
+                font-size: 14px;
+                color: #777777;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>بسم الله الرحمن الرحيم</h1>
+            </div>
+
+            <div class="content">
+                <p class="greeting">السلام عليكم ورحمة الله، {{ $name }}</p>
+
+                <p>
+                    تتشرف إدارة المنصة بدعوتك للانضمام إلى فريقنا كمعلم. يرجى
+                    الضغط على الزر أدناه لإنشاء كلمة المرور الخاصة بك وتفعيل
+                    حسابك بنجاح:
+                </p>
+            </div>
+
+            <div class="cta-button">
+                <a href="{{ $url }}" target="_blank">تفعيل الحساب والبدء</a>
+            </div>
+
+            <div class="link-text">
+                إذا لم يعمل الزر، يمكنك استخدام الرابط المباشر التالي:
+                <br />
+                <a
+                    href="{{ $url }}"
+                    style="color: #104d46; text-decoration: underline"
+                    >{{ $url }}</a
+                >
+            </div>
+
+            <div class="expiration">
+                <p>
+                    ملاحظة هامة: سوف تنتهي صلاحية هذا الرابط خلال 24 ساعة من
+                    الآن.
+                </p>
+            </div>
+
+            <div class="footer">
+                <p>
+                    نتمنى لك كل التوفيق والنجاح في مهمتك التعليمية النبيلة.
+                    <br />
+                    مع خالص التقدير، إدارة المنصة.
+                </p>
+            </div>
         </div>
-
-        <div class="content">
-            <p class="greeting">أهلاً بك، {{ $name }}</p>
-
-            <p>
-                تتشرف إدارة المنصة بدعوتك للانضمام إلى فريقنا كمعلم. يرجى الضغط على الزر أدناه لإنشاء كلمة المرور الخاصة بك وتفعيل حسابك بنجاح:
-            </p>
-        </div>
-
-        <div class="cta-button">
-            <a href="{{ $url }}" target="_blank">تفعيل الحساب والبدء</a>
-        </div>
-        
-        <div class="link-text">
-            إذا لم يعمل الزر، يمكنك استخدام الرابط المباشر التالي:
-            <br>
-            <a href="{{ $url }}" style="color: var(--accent-color); text-decoration: underline;">{{ $url }}</a>
-        </div>
-
-        <div class="expiration">
-            <p>
-                ملاحظة هامة: سوف تنتهي صلاحية هذا الرابط خلال 24 ساعة من الآن.
-            </p>
-        </div>
-
-        <div class="footer">
-            <p>
-                نتمنى لك كل التوفيق والنجاح في مهمتك التعليمية النبيلة.
-                <br>
-                مع خالص التقدير، إدارة المنصة.
-            </p>
-        </div>
-    </div>
-</body>
+    </body>
 </html>

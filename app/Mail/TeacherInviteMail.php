@@ -24,7 +24,7 @@ class TeacherInviteMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'You’ve Been Invited to Join the Platform',
+            subject: 'دعوة للإنضمام إلى منصة الوحيين',
         );
     }
 
